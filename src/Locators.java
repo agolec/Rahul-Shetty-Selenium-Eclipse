@@ -20,7 +20,12 @@ public class Locators {
 		String errorText = driver.findElement(By.cssSelector("p.error")).getText();
 		System.out.println(errorText);
 		
+		driver.findElement(By.linkText("Forgot your password?")).click();
 		
+		driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("Mel Gibson");
+		driver.findElement(By.cssSelector("input[placeholder='Email']")).sendKeys("John@Smith.com");
+		driver.findElement(By.cssSelector("input[placeholder='Email']")).clear();
+		driver.findElement(By.cssSelector("input[type='text']:nth-child(3)")).sendKeys("something@mail.com");
 		driver.quit();
 	}
 	
