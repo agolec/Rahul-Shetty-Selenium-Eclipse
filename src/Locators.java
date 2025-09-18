@@ -26,6 +26,10 @@ public class Locators {
 		driver.findElement(By.cssSelector("input[placeholder='Email']")).sendKeys("John@Smith.com");
 		driver.findElement(By.cssSelector("input[placeholder='Email']")).clear();
 		driver.findElement(By.cssSelector("input[type='text']:nth-child(3)")).sendKeys("something@mail.com");
+		driver.findElement(By.cssSelector(".reset-pwd-btn")).click();
+		errorText = driver.findElement(By.cssSelector("form p")).getText();
+		
+		System.out.println(errorText);
 		driver.quit();
 	}
 	
